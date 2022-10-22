@@ -30,19 +30,21 @@ let PasswordGenerator =()=> {
         let thePassword =  createPassword.generatePassword(passwordObject, state.passwordlength)
         setState({...state, generatedPassword : thePassword});
     }
-    let onClick=() => {
-        navigator.clipboard.writeText(this.state.textToCopy)}
+    const copyText = ()=>{
+        var copytext = document.querySelector("#pass");
+        copytext.select();
+        navigator.clipboard.writeText(copytext.value);
+       }
     return (
         <div className="container mt-5">
-            {/* <pre>{JSON.stringify(state)}</pre> */}
             <div className='text-light'>Password Generator</div>
             <div className='row'>
                 <form onSubmit={submit}>
                 <div className="col">
                     <div className="bg-dark ">
                     <div className="d-flex justify-content-between">
-                        <div value={state.generatedPassword} className="text-light p-4" name='generatedPassword'>{state.generatedPassword}</div>
-                        <i className='fa fa-copy p-4' id='copybtn' onClick={onClick}></i>
+                        <input value={state.generatedPassword} className="form-control bg-dark text-light p-4" name='generatedPassword' id='pass'/>
+                        <i className='fa fa-copy p-4' id='copybtn' onClick={copyText}></i>
                     </div>
                     </div>
                     <div className="bg-dark mt-2 p-2">

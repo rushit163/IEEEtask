@@ -36,6 +36,9 @@
 body{
   background-color: #282c34;
 }
+#pass{
+  border-width: 0;
+}
 #button{
   background-color: greenyellow;
 }
