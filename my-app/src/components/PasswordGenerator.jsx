@@ -12,8 +12,30 @@ let PasswordGenerator =()=> {
                     </div>
                     </div>
                     <div className="bg-dark mt-2 p-2">
+                        <div className="d-flex justify-content-between">
                         <label for="customRange3" class="form-label text-light">Character Length</label>
+                        <span className='text-light'>0</span>
+                        </div>
                         <input type="range" class="form-range" min="0" max="50" step="0.5" id="customRange3"></input>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""/>
+                        <label class="form-check-label text-light" for="flexCheckDefault">Include UpperCase Characters</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""/>
+                        <label class="form-check-label text-light" for="flexCheckDefault">Include UpperCase Characters</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""/>
+                        <label class="form-check-label text-light" for="flexCheckDefault">Include Numbers</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                        <label class="form-check-label text-light" for="flexCheckDefault">Include Symbols</label>
+                    </div>
+                    </div>
+                    <div className="bg-dark p-2">
+                    <button className='btn btn-outline mt-2' id='button' type='submit'>Generate</button>
                     </div>
                 </div>
             </div>
