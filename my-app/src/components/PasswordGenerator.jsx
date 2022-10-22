@@ -37,10 +37,10 @@ let PasswordGenerator =()=> {
             <div className='row'>
                 <form onSubmit={submit}>
                 <div className="col">
-                    <div className="bg-dark p-2">
+                    <div className="bg-dark ">
                     <div className="d-flex justify-content-between">
-                        <div value={state.generatedPassword} className="text-light"  name='generatedPassword'>{state.generatedPassword}</div>
-                        <i className='bg-dark fa fa-copy'></i>
+                        <div value={state.generatedPassword} className="text-light p-4" name='generatedPassword'>{state.generatedPassword}</div>
+                        <i className='bg-dark fa fa-copy p-4' id='copybtn'></i>
                     </div>
                     </div>
                     <div className="bg-dark mt-2 p-2">
