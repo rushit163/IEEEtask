@@ -41,6 +41,7 @@ body{
 }
 #copybtn:hover{
   cursor: pointer;
+  background-color: rgba(3, 5, 50, 0.693);
 }
 @keyframes App-logo-spin {
   from {

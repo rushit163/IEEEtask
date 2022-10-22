@@ -30,6 +30,8 @@ let PasswordGenerator =()=> {
         let thePassword =  createPassword.generatePassword(passwordObject, state.passwordlength)
         setState({...state, generatedPassword : thePassword});
     }
+    let onClick=() => {
+        navigator.clipboard.writeText(this.state.textToCopy)}
     return (
         <div className="container mt-5">
             {/* <pre>{JSON.stringify(state)}</pre> */}
@@ -40,7 +42,7 @@ let PasswordGenerator =()=> {
                     <div className="bg-dark ">
                     <div className="d-flex justify-content-between">
                         <div value={state.generatedPassword} className="text-light p-4" name='generatedPassword'>{state.generatedPassword}</div>
-                        <i className='bg-dark fa fa-copy p-4' id='copybtn'></i>
+                        <i className='fa fa-copy p-4' id='copybtn' onClick={onClick}></i>
                     </div>
                     </div>
                     <div className="bg-dark mt-2 p-2">
