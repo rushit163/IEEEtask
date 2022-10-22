@@ -33,6 +33,6 @@ export class createPassword{
              if(passwordobj.symbol) rnadomPassword += `${this.getRandomSymbol()}`;
              if(passwordobj.numbers) rnadomPassword += `${this.getRandomNumber()}`;
          }
-         return rnadomPassword;
+         return rnadomPassword.substring(0,Number(passwordLength));
      }
 }
