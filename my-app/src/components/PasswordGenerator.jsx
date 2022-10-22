@@ -40,7 +40,7 @@ let PasswordGenerator =()=> {
                     <div className="bg-dark p-2">
                     <div className="d-flex justify-content-between">
                         <div value={state.generatedPassword} className="text-light"  name='generatedPassword'>{state.generatedPassword}</div>
-                        <button className='input-group-text password bg-dark' ><i className="fa fa-copy"></i></button>
+                        <i className='bg-dark fa fa-copy'></i>
                     </div>
                     </div>
                     <div className="bg-dark mt-2 p-2">
