@@ -38,8 +38,8 @@ let PasswordGenerator =()=> {
                 <form onSubmit={submit}>
                 <div className="col">
                     <div className="bg-dark p-2">
-                    <div className="input-group">
-                        <input value={state.generatedPassword} onChange = {updateInput} type="text" className="form-control bg-dark password text-light" placeholder="Random Password" name='generatedPassword'/>
+                    <div className="d-flex justify-content-between">
+                        <div value={state.generatedPassword} className="text-light"  name='generatedPassword'>{state.generatedPassword}</div>
                         <button className='input-group-text password bg-dark' ><i className="fa fa-copy"></i></button>
                     </div>
                     </div>
