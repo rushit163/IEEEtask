@@ -70,7 +70,7 @@ let PasswordGenerator =()=> {
                         <label className="form-check-label text-light" htmlFor="flexCheckDefault">Include Symbols</label>
                     </div>
                     </div>
-                    <div className="bg-dark p-2">
+                    <div className="d-flex justify-content-center bg-dark p-2">
                     <input type='submit' value="Generate" className="btn btn-outline-dark" id='button'/>
                     </div>
                 </div>
