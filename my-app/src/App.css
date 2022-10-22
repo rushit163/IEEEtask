@@ -33,6 +33,9 @@
 .fa {
   color:greenyellow;
 }
+body{
+  background-color: #282c34;
+}
 #button{
   background-color: greenyellow;
 }
