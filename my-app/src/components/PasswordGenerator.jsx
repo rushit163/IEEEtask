@@ -35,7 +35,7 @@ let PasswordGenerator =()=> {
                     </div>
                     </div>
                     <div className="bg-dark p-2">
-                    <button className='btn btn-outline mt-2' id='button' type='submit'>Generate</button>
+                    <button className='btn btn-outline mt-2' id='button' type='submit'>Generate password</button>
                     </div>
                 </div>
             </div>
