@@ -47,7 +47,7 @@ body{
   background-color: rgba(3, 5, 50, 0.693);
 }
 #strengthDiv{
-  background-color: #000000;
+  background-color: grey;
 }
 .colorDiv{
   min-width: 20px;

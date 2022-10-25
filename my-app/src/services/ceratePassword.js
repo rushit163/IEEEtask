@@ -26,9 +26,19 @@ export class createPassword{
         }
         return passwordobj;
     }
-
-
-    
+    static colorDivs(){
+        for(let n = 1;n<=this.count;n++){
+            let div = document.querySelector(`#colorDiv${n}`);
+            div.style.backgroundColor = "greenyellow";
+        }
+        this.count = 0;
+    }
+    static reset(){
+        for(let n = 1;n<=4;n++){
+            let div = document.querySelector(`#colorDiv${n}`);
+            div.style.backgroundColor = "white";
+        }
+    }
     static generatePassword(passwordobj, passwordLength){
        let rnadomPassword = '';
        for(let i=0; i<Number(passwordLength); i+= Object.keys(passwordobj).length){
@@ -38,11 +48,5 @@ export class createPassword{
              if(passwordobj.numbers) rnadomPassword += `${this.getRandomNumber()}`;
          }
          return rnadomPassword.substring(0,Number(passwordLength));
-     }
-    static colorDivs(){
-        for(let n = 1;n<=this.count;n++){
-            let div = document.querySelector('.Div.colorDiv:nth-of-type(n+1)');
-            div.style.backgroundColor = "greenyellow";
         }
-     }
 }

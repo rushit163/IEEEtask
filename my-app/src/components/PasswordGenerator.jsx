@@ -29,7 +29,9 @@ let PasswordGenerator =()=> {
         let passwordObject = createPassword.getObjects(state);
         let thePassword =  createPassword.generatePassword(passwordObject, state.passwordlength)
         setState({...state, generatedPassword : thePassword});
+        createPassword.reset();
         createPassword.colorDivs();
+        createPassword.count = 0;
     }
     const copyText = ()=>{
         var copytext = document.querySelector("#pass");
@@ -74,10 +76,10 @@ let PasswordGenerator =()=> {
                     <div className="d-flex justify-content-around align-items-center" id='strengthDiv'>
                         <p className='text-light'>Strength:</p>
                         <div className="d-flex justify-content-around align-items-center Div">
-                        <div className='Div colorDiv'></div>
-                        <div className='Div colorDiv'></div>
-                        <div className='Div colorDiv'></div>
-                        <div className='Div colorDiv'></div>
+                        <div className='Div colorDiv' id='colorDiv1'></div>
+                        <div className='Div colorDiv' id='colorDiv2'></div>
+                        <div className='Div colorDiv' id='colorDiv3'></div>
+                        <div className='Div colorDiv' id='colorDiv4'></div>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center bg-dark p-2">
