@@ -9,9 +9,10 @@ export class createPassword{
         return String.fromCharCode(Math.floor(Math.random()*10) + 48);    
     }
     static getRandomSymbol(){
-        let symbols = `~,./;'[]-=<>?:"{}_+\|`
+        let symbols = `~,./;'[]-=<>?:"{}_+|`
         return symbols[Math.floor(Math.random()*symbols.length)];
     }
+    static count = 0;
     static getObjects(state){
         let passwordobj = {};
         for(let key of Object.keys(state)){
@@ -20,10 +21,13 @@ export class createPassword{
                     ...passwordobj,
                     [key] : state[key]
                 }
+                this.count = this.count + 1;
             }
         }
         return passwordobj;
     }
+
+
     
     static generatePassword(passwordobj, passwordLength){
        let rnadomPassword = '';
@@ -34,5 +38,11 @@ export class createPassword{
              if(passwordobj.numbers) rnadomPassword += `${this.getRandomNumber()}`;
          }
          return rnadomPassword.substring(0,Number(passwordLength));
+     }
+    static colorDivs(){
+        for(let n = 1;n<=this.count;n++){
+            let div = document.querySelector('.Div.colorDiv:nth-of-type(n+1)');
+            div.style.backgroundColor = "greenyellow";
+        }
      }
 }

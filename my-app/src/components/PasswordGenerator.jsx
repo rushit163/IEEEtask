@@ -29,6 +29,7 @@ let PasswordGenerator =()=> {
         let passwordObject = createPassword.getObjects(state);
         let thePassword =  createPassword.generatePassword(passwordObject, state.passwordlength)
         setState({...state, generatedPassword : thePassword});
+        createPassword.colorDivs();
     }
     const copyText = ()=>{
         var copytext = document.querySelector("#pass");
@@ -69,6 +70,15 @@ let PasswordGenerator =()=> {
                         <input onChange={updateCheckBox} name='symbol' className="form-check-input" type="checkbox"/>
                         <label className="form-check-label text-light" htmlFor="flexCheckDefault">Include Symbols</label>
                     </div>
+                    </div>
+                    <div className="d-flex justify-content-around align-items-center" id='strengthDiv'>
+                        <p className='text-light'>Strength:</p>
+                        <div className="d-flex justify-content-around align-items-center Div">
+                        <div className='Div colorDiv'></div>
+                        <div className='Div colorDiv'></div>
+                        <div className='Div colorDiv'></div>
+                        <div className='Div colorDiv'></div>
+                        </div>
                     </div>
                     <div className="d-flex justify-content-center bg-dark p-2">
                     <input type='submit' value="Generate" className="btn btn-outline-dark" id='button'/>

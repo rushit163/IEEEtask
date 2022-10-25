@@ -46,6 +46,15 @@ body{
   cursor: pointer;
   background-color: rgba(3, 5, 50, 0.693);
 }
+#strengthDiv{
+  background-color: #000000;
+}
+.colorDiv{
+  min-width: 20px;
+  min-height: 40px;
+  margin: 10px;
+  background-color: aliceblue;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
